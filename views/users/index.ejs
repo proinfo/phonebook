@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Users</title>
+</head>
+
+<body>
+  <h1>All Users</h1>
+  <table>
+    <tbody>
+
+      <% for (let index=phonebook.length-1; index>= 0; index--) { %>
+        <tr>
+          <td>
+            <%= phonebook[index].id %>
+          </td>
+          <td>
+            <%= phonebook[index].first_name %>
+          </td>
+          <td>
+            <%= phonebook[index].last_name %>
+          </td>
+          <td>
+            <%= phonebook[index].phone %>
+          </td>
+          <td>
+            <a href='/users/<%= phonebook[index].id %>'>Details</a>
+          </td>
+        </tr>
+        <% } %>
+    </tbody>
+  </table>
+  <a href="/users/new">Add New</a>
+</body>
+
+</html>

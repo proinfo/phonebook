@@ -1,0 +1,29 @@
+<% const userData=user.rows[0] %>
+
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User
+      <%= userData.first_name %>
+        <%= userData.last_name %>
+    </title>
+  </head>
+
+  <body>
+
+    <h1>
+      <%= userData.first_name %>
+        <%= userData.last_name %>
+    </h1>
+    <b>Phone Number: </b> <i>
+      <%=userData.phone%>
+    </i>
+    <br />
+    <a href="user/<%=userData.id%>/update">Update</a>
+    <a href="user/<%=userData.id%>/delete">Delete</a>
+  </body>
+
+  </html>

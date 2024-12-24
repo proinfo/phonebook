@@ -1,0 +1,33 @@
+<% const userData=user.rows[0] %>
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+  </head>
+
+  <body>
+    <h1>Update user
+      <%= userData.first_name %>
+        <%= userData.last_name %>
+    </h1>
+    <form action="/users/user/<%=userData.id%>/update" method="post">
+      <label>First Name
+        <input type="text" name="firstName" value="<%= userData.first_name %>" />
+      </label>
+      <br />
+      <label>Last Name
+        <input type="text" name="lastName" value="<%= userData.last_name %>" />
+      </label>
+      <br />
+      <label>Phone
+        <input type="text" name="phone" value="<%= userData.phone %>" />
+      </label>
+      <br />
+      <button type="submit">Update</button>
+    </form>
+  </body>
+
+  </html>
